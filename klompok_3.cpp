@@ -13,6 +13,47 @@ struct Gunung {
 };
 
 int main() {
+	  Gunung dataGunung[100];
+    int count = 0;
+    int input;
+
+    // Inisialisasi contoh data gunung
+    dataGunung[count++] = {"Gunung Merapi", 2911, "Yogyakarta, Jawa Tengah", "Stratovolcano", 2021, 5, "Aktif"};
+    dataGunung[count++] = {"Gunung Rinjani", 3726, "Lombok, Nusa Tenggara Barat", "Stratovolcano", 2010, 3, "Aktif"};
+    dataGunung[count++] = {"Gunung Bromo", 2329, "Jawa Timur", "Caldera", 2016, 2, "Aktif"};
+    dataGunung[count++] = {"Gunung Kerinci", 3805, "Jambi", "Stratovolcano", 2019, 7, "Aktif"};
+    dataGunung[count++] = {"Gunung Tambora", 2850, "Pulau Sumbawa, Nusa Tenggara Barat", "Stratovolcano", 1967, 4, "Non-Aktif"};
+
+    while (true) {
+
+        cout << "MENU" << endl;
+        cout << "1. Input Data Gunung" << endl;
+        cout << "2. Tampilkan Data" << endl;
+        cout << "3. Update Data Gunung" << endl;
+        cout << "4. Hapus Data Gunung" << endl;
+        cout << "5. Keluar" << endl;
+        cout << "Pilih menu: ";
+        cin >> input;
+
+        if (input == 1 && count < 100) {
+            // input data gunung
+            cout << "Nama: ";
+            cin >> dataGunung[count].nama;
+            cout << "Tinggi: ";
+            cin >> dataGunung[count].tinggi;
+            cout << "Lokasi: ";
+            cin >> dataGunung[count].lokasi;
+            cout << "Tipe Gunung: ";
+            cin >> dataGunung[count].tipeG;
+            cout << "Tahun Letusan Terakhir: ";
+            cin >> dataGunung[count].tahun_letusan_terakhir;
+            cout << "Total Letusan: ";
+            cin >> dataGunung[count].total_letusan;
+            cout << "Status: ";
+            cin >> dataGunung[count].status;
+
+            count++;
+        }
 
   
 
