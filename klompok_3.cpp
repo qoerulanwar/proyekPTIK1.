@@ -54,7 +54,26 @@ int main() {
 
             count++;
         }
-
+         else if (input == 2) {
+            // tampilkan data
+            if (count == 0) {
+                cout << "Belum ada data gunung yang dimasukkan." << endl;
+            }
+            else {
+                cout << "Data Gunung:" << endl;
+                for (int i = 0; i < count; i++) {
+                    cout << "Gunung " << i + 1 << endl;
+                    cout << "Nama: " << dataGunung[i].nama << endl;
+                    cout << "Tinggi: " << dataGunung[i].tinggi << endl;
+                    cout << "Lokasi: " << dataGunung[i].lokasi << endl;
+                    cout << "Tipe Gunung: " << dataGunung[i].tipeG << endl;
+                    cout << "Tahun Letusan Terakhir: " << dataGunung[i].tahun_letusan_terakhir << endl;
+                    cout << "Total Letusan: " << dataGunung[i].total_letusan << endl;
+                    cout << "Status: " << dataGunung[i].status << endl << endl;
+                }
+            }
+    }
+}
   
 
     return 0;
